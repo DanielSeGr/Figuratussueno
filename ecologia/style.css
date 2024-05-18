@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 90%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.header:hover::before {
+    opacity: 1;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #3f3f3f;
+}
+
+.header {
+    height: 60vh !important;
+    background: url(E1.webp) no-repeat center;
+    background-size: cover;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: #fff;
+    padding: 0 100px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0;
+    color: #fff;
+    text-decoration: none;
+    background: #9c27b0;
+}
+
+.btn:hover {
+    background: none;
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background: #1f1d1d;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.box-container .box {
+    height: 11rem;
+    width: 17rem;
+    background: #101010;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0, 0, .5);
+    margin: 2rem;
+    cursor: pointer; /* Agregamos cursor:pointer para indicar que se puede hacer clic */
+    transition: transform 0.5s ease-in-out; /* Agregamos la transición */
+}
+
+.box-container .box img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+/* Agregamos el estilo para la imagen activa (con el efecto de transición) */
+.box.active img {
+    transform: perspective(800px) rotateX(10deg) rotateY(10deg) scale(1.1);
+}
+
+.about {
+    background: #171717;
+}
+
+.price {
+    background: url(E2.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+/* Agregamos estilos para el contenedor de inclinación (tilt-container) */
+.tilt-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    perspective: 1000px; /* Añadimos una perspectiva para el efecto tilt */
+}
+
+/* Estilos para la imagen que se inclina */
+.tilt-image {
+    max-width: 100%;
+    max-height: 100%;
+    transform: rotateX(10deg) rotateY(10deg); /* Inicialmente, rotamos la imagen en X e Y */
+    transition: transform 0.5s ease; /* Agregamos una transición suave */
+}
+
+/* Cambiamos la rotación de la imagen cuando el hover */
+.tilt-container:hover .tilt-image {
+    transform: rotateX(0deg) rotateY(0deg); /* Cuando se realiza un hover, reseteamos la rotación */
+}
+
+.new-image{
+    background: #1f1d1d;
+}
+
+
+.contact {
+    padding-top: 20px;
+    background: #171717;
+    padding-bottom: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.image {
+    margin: 0 10px;
+}
+
+.image img {
+    max-height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.venetian-blinds img {
+    max-height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: left;
+    transform-style: preserve-3d;
+}
+
+.venetian-blinds img:hover {
+    transform: perspective(120px) rotateY(70deg) scale(1.1);
+}
+
+.hover-blur img {
+    max-height: 170px;
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-blur img:hover {
+    filter: blur(5px);
+}
